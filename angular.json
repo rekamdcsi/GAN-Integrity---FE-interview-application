@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "book-enthusiast-application:build:production"
+              "buildTarget": "book-enthusiast-application:build:production"
             },
             "development": {
-              "browserTarget": "book-enthusiast-application:build:development"
+              "buildTarget": "book-enthusiast-application:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "book-enthusiast-application:build"
+            "buildTarget": "book-enthusiast-application:build"
           }
         },
         "test": {
