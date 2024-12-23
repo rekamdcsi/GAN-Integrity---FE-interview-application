@@ -1,0 +1,13 @@
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+
+mat-spinner {
+  margin-bottom: 30px;
+}

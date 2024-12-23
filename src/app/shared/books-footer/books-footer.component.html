@@ -1,0 +1,18 @@
+<footer class="footer-container">
+  <div class="footer-left">
+    <p class="powered-by">Powered by</p>
+    <ul class="footer-list">
+      @for(link of footerLinks; track link.linkName) {
+        <a [href]="link.linkHref" target="_blank" [attr.aria-label]="link.label">
+          {{ link.linkName }}
+        </a>
+      }
+    </ul>
+  </div>
+  <div class="footer-right">
+    <span>Work with Reka
+      <mat-icon class="heart-icon">favorite</mat-icon>
+    </span>
+  </div>
+</footer>
+

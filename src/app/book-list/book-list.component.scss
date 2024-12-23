@@ -1,0 +1,13 @@
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin: 40px;
+}
+
+app-book-card {
+  flex: 1 1 calc(25% - 16px);
+  max-width: 300px;
+  box-sizing: border-box;
+}

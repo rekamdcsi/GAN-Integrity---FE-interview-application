@@ -1,0 +1,32 @@
+<app-books-header></app-books-header>
+
+<main>
+  <h1>Book details</h1>
+
+  @if(isLoading) {
+    <app-loader></app-loader>
+  } @else {
+    @if(hasError) {
+      <app-not-found-page></app-not-found-page>
+    }
+    @else {
+    <mat-card class="book-detail-card">
+      <mat-card-header>
+        <div class="book-cover">
+          <img mat-card-image [src]="book.imageLinks.thumbnail" alt="Book Cover" />
+        </div>
+      </mat-card-header>
+
+      <mat-card-content class="book-details">
+        <h2>Title: {{ book.title }}</h2>
+        <strong>Author: {{ book.authors.join(', ') }}</strong>
+
+        <p class="description-text">
+          {{ book.description }}
+        </p>
+      </mat-card-content>
+    </mat-card>
+  }}
+</main>
+
+<app-books-footer></app-books-footer>

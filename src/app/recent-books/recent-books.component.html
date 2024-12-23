@@ -1,0 +1,36 @@
+<app-books-header></app-books-header>
+
+<main>
+  <h1>Recent books</h1>
+
+  @if(isLoading) {
+    <app-loader></app-loader>
+  } @else {
+      <div class="search-container">
+
+          <mat-form-field appearance="outline">
+            <mat-label id="search-label">Search for books</mat-label>
+            <input
+              aria-labelledby="search-label"
+              matInput
+              [(ngModel)]="searchQuery"
+              placeholder="Search books..."
+              (keydown.enter)="onSearch()"
+            />
+            </mat-form-field>
+          <button mat-button (click)="onSearch()"> SEARCH </button>
+
+      </div>
+      <div class="book-list">
+      @if(isBookListEmpty) {
+        <p> No books found </p>
+      } @else {
+        @for(book of filteredBooks; track book.id) {
+          <app-book-card [book]="book"> </app-book-card>
+          }
+        }
+    </div>
+    }
+</main>
+
+<app-books-footer></app-books-footer>

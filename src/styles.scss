@@ -1,4 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+main {
+  padding: 24px;
+  padding-bottom: 40px;
+  max-width: 1200px;
+  margin: auto;
+  // height - footer - header - padding
+  min-height: calc(100vh - 150px - 80px - 64px);
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+h1 {
+  font-size: 2rem !important;
+  margin: 24px !important;
+  font-weight: 800 !important;
+}
+

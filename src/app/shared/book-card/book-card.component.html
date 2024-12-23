@@ -1,0 +1,14 @@
+<mat-card class="book-card" attr.aria-label="{{ bookDetails?.title || 'No Title' }}">
+  <mat-card-header>
+    <mat-card-title>{{ bookDetails?.title || 'No Title' }}</mat-card-title>
+    <mat-card-subtitle>{{ bookDetails?.authors?.join(',') ||  'Unknown Author' }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <img mat-card-image [src]="bookDetails?.imageLinks?.thumbnail || 'https://via.placeholder.com/150'" alt="Cover of {{ bookDetails?.title }}">
+  </mat-card-content>
+  @if (showBookDetails) {
+    <mat-card-actions>
+      <a [routerLink]="['/book', book.id]">Open details</a>
+    </mat-card-actions>
+  }
+</mat-card>

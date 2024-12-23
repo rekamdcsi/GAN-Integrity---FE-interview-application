@@ -1,0 +1,26 @@
+<app-books-header></app-books-header>
+
+<main>
+  <h1>Books list</h1>
+
+  @if(isLoading) {
+    <app-loader></app-loader>
+  } @else {
+    @if(isBookListEmpty) {
+      <app-not-found-page></app-not-found-page>
+    } @else {
+      <div class="book-list">
+        @for(book of books; track book.id) {
+          <app-book-card
+            [showBookDetails]="true"
+            [book]="book"
+            [id]="book.id"
+            >
+          </app-book-card>
+        }
+      </div>
+    }
+  }
+</main>
+
+<app-books-footer></app-books-footer>
